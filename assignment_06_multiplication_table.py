@@ -55,3 +55,22 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def generate_single_table(number):
+    print(f"Multiplication Table for {number}:")
+    for i in range(1, 13):
+        print(f"{number} x {i} = {number * i}")
+
+def generate_tables_from_1_to_n(n):
+    if n <= 0:
+        print("Error: N must be a positive integer.")
+        return
+    for number in range(1, n + 1):
+        generate_single_table(number)
+        print("---")
+
+#main program to get user input and call the appropriate functions
+number = int(input("Enter a number for the multiplication table: "))
+generate_single_table(number)
+
+n = int(input("Enter N for tables from 1 to N: "))
+generate_tables_from_1_to_n(n)
